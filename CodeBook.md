@@ -53,13 +53,15 @@ All the three files in the test and train folders are read in and combined into 
 
 Each of these variables is described in the CodeBook section of the document.	
 
-#CodeBook
+#CodeBook for dla_msrmt.txt
 
 Variable names are in ***bolditalic***.
 
 ***subjID***
 
 Source: subject_test.txt or subject_train.txt
+
+Description: Subject whose data is being collected.
 
 Data type :  numeric
 
@@ -72,6 +74,8 @@ Labels : None
 ***actDesc***
 
 Source: y_test.txt or y_train.txt
+
+Description: A value that identifies one of the 6 ADLs.
 
 Data type :  numeric
 
@@ -91,6 +95,8 @@ All the feature variables have the following generic description block.
 ***See the table below for the feature variable names ***
 
 Source: X_test.txt or X_train.txt
+
+Description: The *mean* of the feature values for a given subject, and ADL combination.
 
 Data type :  numeric
 

@@ -5,11 +5,15 @@ This file provides the following information for creating the dla_msrmt.txt data
 1. Download the data from https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip
 
 2. Create a project folder called **gcd** (can be any name of your choice). Extract the zip  from step 1 into a folder called **data** inside the **gcd** folder. You should see the following files and folders in **gcd/data**:
+
 Files: 1. **activity_labels.txt** **features.txt**  **feature_info.txt**
+
 Folders: **test**  and **train**.  The folders **test** and **train** should each have three text files in them.
 
 3. Copy the file run_analysis.R into the **gcd** folder. After this step the **gcd** folder will have the following structure:
+
 Files : **run_analysis.R**
+
 Folder : **data**
 
 4. Complete the steps in the Usage section.
