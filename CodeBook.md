@@ -84,21 +84,18 @@ Labels : Specified in activity_labels.txt in sorted order.
 
 **Feature variables**
 
-**Rules for selecting/dropping and "feature" variable names from the raw data set**
-
 The project requirement is to "preserve the time and frequency domain variables that are measurements on the mean and standard deviation for each measurement".Features that had a -mean or -std in their name were retained.  All feature names in feature.txt were mapped to legal R variable names. To preserve traceability the feature name and the legal names are provided in the table below.
 
-***Feature variable names are in the table below***
+All the feature variables have the following generic description block.
+
+***See the table below for the feature variable names ***
 
 Source: X_test.txt or X_train.txt
-
-*** See the table below for the feature variable names ***
-All the feature variables have the following generic description block.
 
 Data type :  numeric
 
 Units : Acceleration units are in **g**  
-      : Angular velocity units in **radians/sec**
+        Angular velocity units are in **radians/sec**
 
 Range : Normalized to -1 to 1
 
@@ -130,7 +127,7 @@ Labels : Specified in feature.txt in sorted order.
     tBodyGyro-mean()-X         | tBodyGyro.mean.X     | numeric   | radians/sec  
     tBodyGyro-mean()-Y         | tBodyGyro.mean.Y     | numeric   |	radians/sec
     tBodyGyro-mean()-Z         | tBodyGyro.mean.Z     | numeric   | radians/sec  
-    tBodyGyro-std()-X          | tBodyGyro.std.X      | numeric   |	radians/secAVU  
+    tBodyGyro-std()-X          | tBodyGyro.std.X      | numeric   |	radians/sec  
     tBodyGyro-std()-Y          | tBodyGyro.std.Y      | numeric   |	radians/sec  
     tBodyGyro-std()-Z          | tBodyGyro.std.Z      | numeric   | radians/sec  
     tBodyGyroJerk-mean()-X     | tBodyGyroJerk.std.X  | numeric   |	radians/sec  
@@ -185,7 +182,7 @@ Labels : Specified in feature.txt in sorted order.
     fBodyBodyGyroMag-mean()    | fBodyGyroMag.mean.   | numeric   |	radians/sec  
     fBodyBodyGyroMag-std()     | fBodyGyroMag.std.    |	numeric   |	radians/sec  
     fBodyBodyGyroMag-meanFreq()|fBodyGyroMag.meanFreq.|numeric    | radians/sec  
-    fBodyBodyGyroJerkMag-mean()|fBodyGyroJerkMag.mean.|numeric    |	radians/secAVU  
+    fBodyBodyGyroJerkMag-mean()|fBodyGyroJerkMag.mean.|numeric    |	radians/sec  
     fBodyBodyGyroJerkMag-std() |fBodyGyroJerkMag.std. |numeric    |	radians/sec  
     fBodyBodyGyroJerkMag-meanFreq()|fBodyGyroJerkMag.meanFreq.|numeric|	radians/sec
 

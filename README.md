@@ -24,35 +24,42 @@ Folder : **data**
 
 **c) Analysis script in pseudocode form**
 
-1. Step 1.  *Create a single data frame from test and train folders.*
-+ Read and combine files from the test directory into a data frame testDF.
-+ Read and cobine files from the train directory into a data frame trnDF.
-+ Combine testDF and trnDF into one data frame called prjDF. 
+Step 1.  *Create a single data frame from test and train folders.*
+
+* Read and combine files from the test directory into a data frame testDF.
+* Read and combine files from the train directory into a data frame trnDF.
+* Combine testDF and trnDF into one data frame called prjDF. 
 
 Each observation(row) represents an entry with a subjID, actDesc (activity decriptor), followed by the 561 feature variables available in feature.txt.
 
-2. Step 2.  *Extract the columns of interest in prjDF*
-+ Create a character vector with the subjID and actDesc columns followed by the 561 feature names specified in feature.txt.The 561 features correspond to the 561 data columns in the X_train.txt and X_test.txt files.
-+ Extract the columns in the vector corresponding to the subjId, actDesc, mean and standard deviation of each measurement, using string matching on the names provided in feature.txt.Variables that had a *"-mean"* or a "-std"* string as part of their name were retained. All other variables were dropped.**Seventy nine of the 561 variables were retained.** 
-+ Subset the columns of prjDF into a data frame called **xDF**.
+Step 2.  *Extract the columns of interest in prjDF*
 
-3. Step 3.  *Create legal R column names for xDF*
-+ Replace characters like "(", ")" etc into periods. 
-+ Clean the names to replace multiple periods with one and duplicate strings like Body with one.
-+ Set the column names for the xDF data frame.
+* Create a character vector with the subjID and actDesc columns followed by the 561 feature names specified in feature.txt.The 561 features correspond to the 561 data columns in the X_train.txt and X_test.txt files.
+* Extract the columns in the vector corresponding to the subjId, actDesc, mean and standard deviation of each measurement, using string matching on the names provided in feature.txt.Variables that had a *"-mean"* or a "-std"* string as part of their name were retained. All other variables were dropped.**Seventy nine of the 561 variables were retained.**
+* Subset the columns of prjDF into a data frame called **xDF**.
 
-4. Step 4.  *Update the actDesc colums with the labels from activity_labels.txt*
-+ The numbers representing the activities are replaced with strings describing these activities. This is done by converting the actDesc column in the xDF data frame into a R factor and using the second column from activity_labels.txt as factor labels.
+Step 3.  *Create legal R names for xDF columns*
 
-5. Step 5. *Group entries in xDF using the subjID and actDesc columns and summarize the feature variables using mean. Write the results into the dla_msrmt.txt data set.*
-+ Convert xDF into a data table xDT
-+ Group xDT using the subjID and actDesc fields.
-+ Compute the mean for the feature columns in each group.
-+ Write the results to "dla_msrmt.txt". This is a 180x81 dataset.
+* Replace characters like "(", ")" etc into periods. 
+* Clean the feature names to replace multiple periods with one and duplicate strings like Body with one.
+* Set the column names for the xDF data frame.
+
+Step 4.  *Update the actDesc colums with the labels from activity_labels.txt*
+
+* The numbers representing the activities are replaced with strings describing these activities. This is done by converting the actDesc column in the xDF data frame into a R factor and using the second column from activity_labels.txt as factor labels.
+
+Step 5. *Group entries in xDF using the subjID and actDesc columns and summarize the feature variables using mean. Write the results into the dla_msrmt.txt data set.*
+
+* Convert xDF into a data table xDT
+* Group xDT using the subjID and actDesc fields.
+* Compute the mean for the feature columns in each group.
+* Write the results to "dla_msrmt.txt". This is a 180x81 dataset.
 
 
 **d) CodeBook information**
+
 The file CodeBook.md contains the following sections:
+
 * Study Design
 * Raw Data Organization
 * CodeBook with the variable descriptions.
