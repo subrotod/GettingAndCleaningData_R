@@ -78,6 +78,9 @@ tmpnam <- make.names(nam)
 for (i in 1:length(tmpnam)) {
   # Pretty the names, replace three dots(...) with one dot(.) 
   tmpnam[i] <-   sub("\\.\\.\\.*",".",tmpnam[i])
+  
+  ## Removed duplicate Body text e.g. fBodyBodyGyroMag-mean()
+  tmpnam[i] <-   sub("BodyBody","Body",tmpnam[i])
 }
 
 ## Keep the columns of interest
@@ -92,6 +95,8 @@ colnames(xDF) <- tmpnam[selColumns]
 ## Update the activity number with the label from activity_labels.txt
 ## Activities are the second column in prjDF
 actlbl <- read.table("data\\activity_labels.txt", sep = "", stringsAsFactors = FALSE)
+## The following code makes use of the fact that the activity table is ordered 1-6
+## and this is the same as the default levels in the factor call.
 xDF$actDesc <- factor(xDF$actDesc, labels = actlbl$V2)
 read_chk8 <- length(levels(xDF$actDesc)) == 6
 
