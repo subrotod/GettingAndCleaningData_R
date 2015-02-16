@@ -96,7 +96,7 @@ All the feature variables have the following generic description block.
 
 Source: X_test.txt or X_train.txt
 
-Description: The *mean* of the feature values for a given subject, and ADL combination.
+Description: The **mean** of the feature values for a given subject, and ADL combination.
 
 Data type :  numeric
 
