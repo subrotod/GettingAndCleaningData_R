@@ -105,7 +105,7 @@ The project requirement is to "preserve the time and frequency domain variables 
 
 All the feature variables have the following generic description block.
 
-***See the table below for the feature variable names ***
+***See the table below for the feature variable names***
 
 Source: X_test.txt or X_train.txt
 
