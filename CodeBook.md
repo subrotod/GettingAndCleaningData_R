@@ -63,11 +63,11 @@ Source: subject_test.txt or subject_train.txt
 
 Description: Subject whose data is being collected.
 
-Data type :  numeric
+Data type :  factor/categorical
 
 Units : N/A
 
-Range : 1-30
+Range/Levels : 1-30
 
 Labels : None
 
@@ -83,7 +83,7 @@ Units : N/A
 
 Range/Levels :
 
-Labels : 
+ 
 1 WALKING
 
 2 WALKING_UPSTAIRS
@@ -97,7 +97,6 @@ Labels :
 6 LAYING
 
  
-
 
 **Feature variables**
 
