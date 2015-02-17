@@ -21,6 +21,7 @@ Folder : **data**
 2. Set the working directory to the **gcd** folder using setwd.
 3. source("run_analysis.R")
 4. This will create dla_msrmt.txt. It contains the average of all the measured variables grouped by the thirty subjectids and six daily living activities.
+5. Read the created file using x <- read.table("dla_msrmt.txt", header=TRUE, sep = "")
 
 **c) Analysis script in pseudocode form**
 
