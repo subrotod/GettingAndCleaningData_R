@@ -77,13 +77,26 @@ Source: y_test.txt or y_train.txt
 
 Description: A value that identifies one of the 6 ADLs.
 
-Data type :  numeric
+Data type :  factor/categorical
 
 Units : N/A
 
-Range : 1-6
+Range/Levels :
 
-Labels : Specified in activity_labels.txt in sorted order.
+Labels : 
+1 WALKING
+
+2 WALKING_UPSTAIRS
+
+3 WALKING_DOWNSTAIRS
+
+4 SITTING
+
+5 STANDING
+
+6 LAYING
+
+ 
 
 
 **Feature variables**
