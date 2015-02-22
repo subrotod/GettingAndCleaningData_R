@@ -30,7 +30,7 @@ https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Datas
 **The downloaded data was unzipped into a project sub-folder called data**. The data folder had the following files:  
 1. **activity_labels.txt** : Contains the activity labels for the 6 daily living activities. Used to create the descriptive activity names.    
 2. **features.txt** : Contains the text representation of the 561 features. Used to create descriptive feature names.    
-3. **feature_info.txt** : Describes how the feature columns were derived from the basic sensor measurements - Triaxial acceleration from the accelerometer,  estimated body acceleration  , Triaxial Angular velocity from the gyroscope. Not used during processing.    
+3. **feature_info.txt** : Describes how the feature columns were derived from the basic sensor measurements - Triaxial acceleration from the accelerometer,  estimated body acceleration, Triaxial Angular velocity from the gyroscope and raw measurement data units.    
   
 There were two sub-folders one for test and the other for training. Both **test** and **train** sub-folders had a similar organization. The test folder is described below:
 
@@ -51,7 +51,7 @@ All the three files in the test and train folders are read in and combined into 
   Line .. subject_train.txt| Line .. y_train.txt |Line .. X_train.txt (561 space separated values)  
   Line m subject_train.txt | Line n y_train.txt |	Line m X_train.txt (561 space separated values)
 
-Each of these variables is described in the CodeBook section of the document.	
+Seventy nine of the 561 feature variables n the above dataframe that met the criteria of representing a mean or std deviation measurement were retained. These 79 variables are described in the CodeBook section of the document.	
 
 #CodeBook for dla_msrmt.txt
 
@@ -67,7 +67,7 @@ Data type :  factor/categorical
 
 Units : N/A
 
-Range/Levels : 1-30
+Levels : 1-30
 
 Labels : None
 
@@ -81,20 +81,20 @@ Data type :  factor/categorical
 
 Units : N/A
 
-Range/Levels :
+Levels & Labels :
 
  
-1 WALKING
+ 1 WALKING
 
-2 WALKING_UPSTAIRS
+ 2 WALKING_UPSTAIRS
 
-3 WALKING_DOWNSTAIRS
+ 3 WALKING_DOWNSTAIRS
 
-4 SITTING
+ 4 SITTING
 
-5 STANDING
+ 5 STANDING
 
-6 LAYING
+ 6 LAYING
 
  
 
@@ -122,9 +122,9 @@ Range : Normalized to -1 to 1
 Labels : Specified in feature.txt in sorted order.
 
       
-      **Table: Feature variable names (R Dataset Name column)**
+      **Table: Feature variable names (R DSetName Name column)**
 
-    Raw Feature Name           | R Dataset Name       | Data Type | Raw Units  
+    Raw Feature Name           | R DSetName (no units)| Data Type | Raw Units  
     ---------------------------|----------------------|-----------|-----------  
     tBodyAcc-mean()-X          | tBodyAcc.mean.X      | numeric   | g  
     tBodyAcc-mean()-Y          | tBodyAcc.mean.Y      | numeric   | g  
