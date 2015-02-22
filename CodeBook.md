@@ -112,8 +112,10 @@ Description: The **mean** of the feature values for a given subject, and ADL com
 
 Data type :  numeric
 
-Units : Acceleration units are in **g**  
+Units (Raw variables) : Acceleration units are in **g**  
         Angular velocity units are in **radians/sec**
+        
+Units (R Dataset variables) : As varriable values are normalized they are unitless.
 
 Range : Normalized to -1 to 1
 
@@ -122,8 +124,8 @@ Labels : Specified in feature.txt in sorted order.
       
       **Table: Feature variable names (R Dataset Name column)**
 
-    Raw Feature Name           | R Dataset Name       | Data Type | Units  
-    ---------------------------|----------------------|-----------|-------  
+    Raw Feature Name           | R Dataset Name       | Data Type | Raw Units  
+    ---------------------------|----------------------|-----------|-----------  
     tBodyAcc-mean()-X          | tBodyAcc.mean.X      | numeric   | g  
     tBodyAcc-mean()-Y          | tBodyAcc.mean.Y      | numeric   | g  
     tBodyAcc-mean()-Z          | tBodyAcc.mean.Z      | numeric   | g  
