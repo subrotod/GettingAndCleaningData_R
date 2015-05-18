@@ -1,4 +1,4 @@
-This file provides the following information for creating the dla_msrmt.txt data set:
+This file provides the following information for creating the dla_msrmt.txt data set - Trial Branch file:
 
 **a) Steps used to build the dataset.**
 
